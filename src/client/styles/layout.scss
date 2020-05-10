@@ -1,0 +1,42 @@
+
+
+html {
+  font-size: 16px;
+}
+
+/*Mobile-first Layout*/
+body {
+  margin: 0;
+  background-image: url('../media/bgr-mobile.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  grid-template:
+  'nav'
+  'main'
+  'footer';
+  z-index: 0;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*Larger screens*/
+@media (min-width: 900px) {
+  body {
+    background-image: url('../media/bgr.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}

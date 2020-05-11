@@ -40,6 +40,8 @@ h1 {
 #menu {
   margin-top: 0.8rem;
   margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-btn {
@@ -49,4 +51,23 @@ h1 {
   border-style: none;
   border-radius: 0.5rem;
   color: black;
+}
+
+#dropdown-menu {
+  visibility: hidden;
+  background-color: #53CF87;
+  z-index: 5;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  align-content: center;
+
+  ul {
+    list-style: none;
+    text-align: justify;
+    font-size: 1.6rem;
+
+    li {
+        padding: 0.5rem;
+    }
+  }
 }

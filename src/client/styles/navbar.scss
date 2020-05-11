@@ -51,11 +51,16 @@ h1 {
   border-style: none;
   border-radius: 0.5rem;
   color: black;
+  animation-duration: 0.6s;
+}
+
+.menu-btn:hover {
+  background-color: #ACE2FC;
 }
 
 #dropdown-menu {
   visibility: hidden;
-  background-color: #53CF87;
+  background-color: #ACE2FC;
   z-index: 5;
   border-radius: 0.5rem;
   padding: 0.5rem;

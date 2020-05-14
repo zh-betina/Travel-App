@@ -5,3 +5,13 @@ import './styles/footer.scss';
 import bgr from './media/bgr.png';
 import bgrMobile from './media/bgr-mobile.png';
 import logo from './media/logo.png';
+
+import { clickEvent } from './js/handleInput.js';
+import { handleInput } from './js/handleInput.js';
+import { geonamesData } from './js/handleInput.js';
+
+export {
+  clickEvent,
+  handleInput,
+  geonamesData
+}

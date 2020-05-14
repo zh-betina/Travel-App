@@ -8,10 +8,10 @@ import logo from './media/logo.png';
 
 import { clickEvent } from './js/handleInput.js';
 import { handleInput } from './js/handleInput.js';
-import { geonamesData } from './js/handleInput.js';
+import { geonamesData } from './js/geonamesData.js';
+import { weatherbitData } from './js/weatherbitData.js';
 
 export {
   clickEvent,
-  handleInput,
-  geonamesData
+  handleInput
 }

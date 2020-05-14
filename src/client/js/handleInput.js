@@ -5,37 +5,31 @@ function clickEvent(){
 
 function handleInput(){
 
+const dataArray = [];
+
 const placeName = document.getElementById('place').value;
-console.log(`Place name: ${placeName}`);
+const date = document.getElementById('date').value;
 const geonamesUrl = `http://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
-console.log(`Url: ${geonamesUrl}`);
+dataArray.push(placeName, date);
 geonamesData(geonamesUrl)
 .then(dataRes=> {
-  console.log(dataRes);
-});
-
+  const lat = dataRes.geonames[0].lat;
+  const lng = dataRes.geonames[0].lng;
+  const country = dataRes.geonames[0].countryName;
+  dataArray.push(country, lat, lng);
+  return dataArray;
+})
+.then(dataArray=> {
+  const getNowDate = new Date();
+  chooseWeatherbitOption(dataArray, getNowDate);
+})
 };
 
-async function geonamesData(url = geonamesUrl, dataRes){
-    const response = await fetch(url, {
-      method: 'GET',
-      mode: 'cors',
-      credentials: 'same-origin',
-      header: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dataRes)
-    });
-    try{
-      const dataRes = await response.json();
-      console.log(dataRes);
-      return dataRes;
-    }catch(error){
-      console.log('When GETting data from Geonames API, an error occured: ', error);
-    };
-  };
 
-//http://api.geonames.org/searchJSON?q=london&maxRows=1&username=zh.betina
+
+import { geonamesData } from './geonamesData.js';
+import { weatherbitData } from './weatherbitData.js';
+import { chooseWeatherbitOption } from './chooseWeatherbitOption.js'
+
 export { clickEvent }
 export { handleInput }
-export { geonamesData }

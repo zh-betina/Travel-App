@@ -7,6 +7,8 @@
 * [How to use Local Storage with JavaScript](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/),
 * [Generating multiple html files](https://github.com/jantimon/html-webpack-plugin#generating-multiple-html-files),
 * [Window.matchMedia() - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia),
+* [3 ways to fix the CORS error(...)](https://medium.co,m/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9),
+* [CSS Dropdowns](https://www.w3schools.com/css/css_dropdowns.asp),
 
 
 # Media:

@@ -9,7 +9,7 @@
 * [Window.matchMedia() - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia),
 * [3 ways to fix the CORS error(...)](https://medium.co,m/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9),
 * [CSS Dropdowns](https://www.w3schools.com/css/css_dropdowns.asp),
-
+* [How to handle the IF ELSE in promise.then](https://stackoverflow.com/questions/33257412/how-to-handle-the-if-else-in-promise-then),
 
 # Media:
 

@@ -7,6 +7,7 @@ function handleInput(){
 let dataSet = {};
 let geonamesRes;
 let weatherData;
+let picData;
 const placeName = document.getElementById('place').value;
 const date = document.getElementById('date').value;
 const geonamesUrl = `http://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
@@ -44,18 +45,28 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(weatherData=>{
   dataSet.weather = weatherData.data[0].weather.description;
   dataSet.temp = weatherData.data[0].temp;
-  console.log(dataSet);
+  return dataSet;
 })
 .then(dataSet=>{
-  
+  console.log(dataSet);
+  const key = 'key=16579484-c9f74c18198f80193bbad71c6';
+  const urlPixabay = `https://pixabay.com/api/?${key}&q=${dataSet.country}`;
+return getAPIdata(urlPixabay, picData);
 })
+.then(picData=>{
+  return randomPic(picData, dataSet);
+})
+.then(dataSet=>{
+  // TODO: POST the dataSet to the server.
+});
+
 };
 
 
 
 import { getAPIdata } from './getAPIdata.js';
 import { daysDiff } from './daysDiff.js';
-import { sortWeatherData } from './sortWeatherData.js';
+import { randomPic } from './randomPic.js';
 
 export { clickEvent }
 export { handleInput }

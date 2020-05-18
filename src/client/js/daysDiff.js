@@ -1,12 +1,12 @@
 import { handleInput } from './handleInput.js';
 import { getAPIdata } from './getAPIdata.js';
 
-function daysDiff(dataArray, getNowDate){
+function daysDiff(dataSet, getNowDate){
 
-const tripDate = new Date(dataArray[1]);
+const tripDate = new Date(dataSet.date);
 const dateDiff = Math.abs(tripDate - getNowDate);
 const daysDiff = Math.round(dateDiff/(1000*60*60*24));
-dataArray.push(daysDiff);
+dataSet.daysDiff = daysDiff;
 
 };
 

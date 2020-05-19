@@ -28,7 +28,6 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=> {
   const getNowDate = new Date();
   daysDiff(dataSet, getNowDate);
-  console.log(dataSet);
   return dataSet;
 })
 .then(dataSet=> {
@@ -49,15 +48,20 @@ getAPIdata(geonamesUrl, geonamesRes)
 })
 .then(dataSet=>{
   console.log(dataSet);
+  let urlPixabay;
   const key = 'key=16579484-c9f74c18198f80193bbad71c6';
-  const urlPixabay = `https://pixabay.com/api/?${key}&q=${dataSet.country}`;
+  urlPixabay = `https://pixabay.com/api/?${key}&q=${dataSet.city}`;
 return getAPIdata(urlPixabay, picData);
 })
 .then(picData=>{
-  return randomPic(picData, dataSet);
+return randomPic(picData, dataSet);
 })
 .then(dataSet=>{
-  // TODO: POST the dataSet to the server.
+  console.log('the end');
+  console.log(dataSet);
+  // TODO:
+  //Divide to smaller functions.
+  //POST the dataSet to the server.
 });
 
 };

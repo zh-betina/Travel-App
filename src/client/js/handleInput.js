@@ -47,7 +47,6 @@ getAPIdata(geonamesUrl, geonamesRes)
   return dataSet;
 })
 .then(dataSet=>{
-  console.log(dataSet);
   let urlPixabay;
   const key = 'key=16579484-c9f74c18198f80193bbad71c6';
   urlPixabay = `https://pixabay.com/api/?${key}&q=${dataSet.city}`;

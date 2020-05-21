@@ -1,10 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require('HtmlWebPackPlugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './src/client/app.js',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
     port: 8080
@@ -39,9 +40,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin(),
     new HtmlWebPackPlugin({
       template: './src/client/views/about.html',
       filename: './about.html'
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/client/views/index.html',
+      filename: './index.html'})
   ]
 }

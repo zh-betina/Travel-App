@@ -12,7 +12,6 @@ async function postToServer(url, data){
   });
   try{
     const res = await response.json();
-    console.log(res);
     return res;
   }catch(error){
     console.log('While POSTing, error occured:', error);

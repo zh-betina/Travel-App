@@ -61,7 +61,7 @@ let data;
 return postToServer(url = 'http://localhost:8081/post', data = {dataSet});
 })
 .then(res=>{
-  console.log('the end');
+  console.log(res);
 });
   // TODO:
   //Divide to smaller functions.

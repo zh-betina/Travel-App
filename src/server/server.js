@@ -27,13 +27,23 @@ app.get('/', (req,res)=>{
   res.sendFile('dist/index.html');
 });
 
-app.post('/post', dataProcess);
+app.post('/post', handleData);
 
-function dataProcess(req, res){
+function handleData(req, res){
 
-  const test = req.body;
-  console.log(test);
-  res.send('works');
+  const tripData = req.body.dataSet;
+
+  amadeus.shopping.hotelOffers.get({
+    latitude: tripData.lat ,
+    longitude: tripData.lng,
+    checkInDate: tripData.date
+  })
+  .then(response=>{
+    res.send(response.data);
+  })
+  .catch(error=>{
+    console.log(error.response);
+  });
 };
 
 

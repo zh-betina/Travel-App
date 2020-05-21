@@ -56,13 +56,17 @@ return getAPIdata(urlPixabay, picData);
 return randomPic(picData, dataSet);
 })
 .then(dataSet=>{
+let url;
+let data;
+return postToServer(url = 'http://localhost:8081/post', data = {dataSet});
+})
+.then(res=>{
   console.log('the end');
-  console.log(dataSet);
+});
   // TODO:
   //Divide to smaller functions.
+  //Fix the SPACE in the city names problem.
   //POST the dataSet to the server.
-});
-
 };
 
 
@@ -70,6 +74,7 @@ return randomPic(picData, dataSet);
 import { getAPIdata } from './getAPIdata.js';
 import { daysDiff } from './daysDiff.js';
 import { randomPic } from './randomPic.js';
+import { postToServer } from './postToServer.js';
 
 export { clickEvent }
 export { handleInput }

@@ -47,11 +47,13 @@ module.exports = {
       }),
       new HtmlWebPackPlugin({
         template: './src/client/views/index.html',
-        filename: './index.html'
+        filename: './index.html',
+        minify: false
       }),
       new HtmlWebPackPlugin({
         template: './src/client/views/about.html',
-        filename: './about.html'
+        filename: './about.html',
+        minify: false
       })
     ]
 }

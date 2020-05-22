@@ -17,6 +17,8 @@ dataSet = {
 };
 getAPIdata(geonamesUrl, geonamesRes)
 .then(geonamesRes=> {
+  document.getElementById('plan-trip-section').classList.add('hidden');
+  document.getElementById('loader').classList.remove('hidden');
   const lat = geonamesRes.geonames[0].lat;
   const lng = geonamesRes.geonames[0].lng;
   const country = geonamesRes.geonames[0].countryName;
@@ -61,12 +63,11 @@ let data;
 return postToServer(url = 'http://localhost:8081/post', data = {dataSet});
 })
 .then(res=>{
-  console.log(res);
+return displayResult(res, dataSet);
 });
   // TODO:
   //Divide to smaller functions.
   //Fix the SPACE in the city names problem.
-  //POST the dataSet to the server.
 };
 
 
@@ -75,6 +76,7 @@ import { getAPIdata } from './getAPIdata.js';
 import { daysDiff } from './daysDiff.js';
 import { randomPic } from './randomPic.js';
 import { postToServer } from './postToServer.js';
+import { displayResult } from './displayResult.js';
 
 export { clickEvent }
 export { handleInput }

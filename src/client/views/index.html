@@ -29,17 +29,20 @@
         </div>
       </div>
     </nav>
-    <main>
-      <h2>Plan your trip</h2>
-      <div class="loader"></div> 
-      <div id="plan-trip-input">
-        <form class="form" method="post">
-          <p>Departing:</p>
-          <input class="input" type="date" name="date" id="date" required></input>
-          <p>Destination:</p>
-          <input id="place" placeholder="ex.London" class="input" type="text" name="destination" required></input>
-          <button class="btn" type="button" name="button" onclick="return Client.clickEvent()">Let's go!</button>
-        </form>
+    <main id='main'>
+      <div class="hidden" id="loader">Loading...</div>
+      <div id="plan-trip-section"
+        <h2>Plan your trip</h2>
+        <div class="loader"></div>
+        <div id="plan-trip-input">
+          <form class="form" method="post">
+            <p>Departing:</p>
+            <input class="input" type="date" name="date" id="date" required></input>
+            <p>Destination:</p>
+            <input id="place" placeholder="ex.London" class="input" type="text" name="destination" required></input>
+            <button class="btn" type="button" name="button" onclick="return Client.clickEvent()">Let's go!</button>
+          </form>
+        </div>
       </div>
     </main>
 

@@ -8,8 +8,10 @@ import logo from './media/logo.png';
 
 import { clickEvent } from './js/handleInput.js';
 import { handleInput } from './js/handleInput.js';
+import { saveTrip } from './js/saveTrip.js';
 
 export {
   clickEvent,
-  handleInput
+  handleInput,
+  saveTrip
 }

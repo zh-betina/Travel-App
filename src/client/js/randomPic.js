@@ -5,7 +5,7 @@ function randomPic(picData, dataSet){
 
 if(picData.hits.length!==0){
   const picNumber = picData.hits.length;
-  let i = Math.floor((Math.random() * picNumber) + 1);
+  let i = Math.floor((Math.random() * picNumber));
   dataSet.picUrl = picData.hits[i].webformatURL;
   return dataSet;
 } else {

@@ -34,7 +34,7 @@ function handleData(req, res){
   const tripData = req.body.dataSet;
 
   amadeus.shopping.hotelOffers.get({
-    latitude: tripData.lat ,
+    latitude: tripData.lat,
     longitude: tripData.lng,
     checkInDate: tripData.date
   })
@@ -45,18 +45,3 @@ function handleData(req, res){
     console.log(error.response);
   });
 };
-
-
-/*amadeus.shopping.hotelOffers.get({
-  latitude: ,
-  longitude: ,
-  checkInDate:
-})
-.then(response=>{
-  console.log(response.body);
-  console.log(response.result);
-  console.log(response.data);
-})
-.catch(error=>{
-  console.log(error.response);
-});*/

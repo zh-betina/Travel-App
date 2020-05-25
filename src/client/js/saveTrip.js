@@ -15,17 +15,16 @@ const hotelText = hotel[i].innerText;
 hotels.push(hotelText);
 };
 
-let tripArray = [];
 let tripInfo = {
   'destination': destination,
   'photo': pic,
   'weather': weather,
   'hotels': hotels
 }
-tripArray.push(tripInfo);
 
-
-saveItem('tripInfo', tripArray);
+let i = localStorage.length;
+let key = 'tripInfo'+(i+1);
+saveItem(key, tripInfo);
 
 }
 

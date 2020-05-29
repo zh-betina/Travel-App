@@ -1,14 +1,17 @@
 
 html {
 
+  font-size: 17px;
   height: 100%;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 /*Mobile-first Layout*/
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   min-height: 100vh;
   background-image: url('../media/bgr-mobile.png');
   background-repeat: no-repeat;

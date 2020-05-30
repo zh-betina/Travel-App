@@ -23,8 +23,19 @@ app.use(express.static('dist'));
 
 app.listen(8081, ()=>{console.log('Running on port 8081')});
 
+//Home page routes
 app.get('/', (req,res)=>{
   res.sendFile('dist/index.html');
+});
+
+app.get('/trips', (req, res)=>{
+  res.sendFile('mytrips.html', {root: './dist'});
+});
+
+//About routes
+
+app.get('/about', (req, res)=>{
+  res.sendFile('about.html', {root : './dist'});
 });
 
 app.post('/post', handleData);
@@ -45,3 +56,5 @@ function handleData(req, res){
     console.log(error.response);
   });
 };
+
+//Trips routes

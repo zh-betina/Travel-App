@@ -54,6 +54,11 @@ module.exports = {
         template: './src/client/views/about.html',
         filename: './about.html',
         minify: false
+      }),
+      new HtmlWebPackPlugin({
+        templace: './src/client/views/mytrips.html',
+        filename: './mytrips.html',
+        minify: false
       })
     ]
 }

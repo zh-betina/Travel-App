@@ -9,9 +9,11 @@ import logo from './media/logo.png';
 import { clickEvent } from './js/handleInput.js';
 import { handleInput } from './js/handleInput.js';
 import { saveTrip } from './js/saveTrip.js';
+import { displayTrips } from './js/displayTrips.js';
 
 export {
   clickEvent,
   handleInput,
-  saveTrip
+  saveTrip,
+  displayTrips
 }

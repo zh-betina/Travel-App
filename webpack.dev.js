@@ -63,8 +63,12 @@ module.exports = {
       filename: './index.html'
     }),
     new HtmlWebPackPlugin({
-      templace: './src/client/views/mytrips.html',
+      template: './src/client/views/mytrips.html',
       filename: './mytrips.html'
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/client/views/guide.html',
+      filename: './guide.html'
     })
   ]
 }

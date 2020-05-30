@@ -28,16 +28,6 @@ app.get('/', (req,res)=>{
   res.sendFile('dist/index.html');
 });
 
-app.get('/trips', (req, res)=>{
-  res.sendFile('mytrips.html', {root: './dist'});
-});
-
-//About routes
-
-app.get('/about', (req, res)=>{
-  res.sendFile('about.html', {root : './dist'});
-});
-
 app.post('/post', handleData);
 
 function handleData(req, res){
@@ -58,3 +48,19 @@ function handleData(req, res){
 };
 
 //Trips routes
+
+app.get('/trips', (req, res)=>{
+  res.sendFile('mytrips.html', {root: './dist'});
+});
+
+//About routes
+
+app.get('/about', (req, res)=>{
+  res.sendFile('about.html', {root: './dist'});
+});
+
+//Guide routes
+
+app.get('/guide', (req, res)=>{
+  res.sendFile('guide.html', {root: './dist'})
+});

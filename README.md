@@ -11,7 +11,8 @@
 * [CSS Dropdowns](https://www.w3schools.com/css/css_dropdowns.asp),
 * [How to handle the IF ELSE in promise.then](https://stackoverflow.com/questions/33257412/how-to-handle-the-if-else-in-promise-then),
 * [Amadeus API Documentation](https://github.com/amadeus4dev/amadeus-node),
-* [JavaScrip Start-Up Optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization),
+* [JavaScript Start-Up Optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization),
+* [Check if object contains key - JavaScript](https://oamatech.com/check-if-object-contains-key-javascript/)
 
 # Media:
 

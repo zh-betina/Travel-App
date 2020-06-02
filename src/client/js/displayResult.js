@@ -20,7 +20,7 @@ function displayResult(res, dataSet){
     </div>
     <div id="options-buttons">
       <button id="save" onclick="return Client.saveTrip()">Save this trip</button>
-      <button id="cancel" onclick="return Client.cancel()">Cancel</button>
+      <button id="cancel" onclick="window.location='/'">Cancel</button>
     </div>
   </div>`;
   document.getElementById('main').innerHTML = aboutPlace;

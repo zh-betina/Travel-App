@@ -23,8 +23,9 @@ let tripInfo = {
 }
 
 let i = localStorage.length;
-let key = 'tripInfo'+(i+1);
-saveItem(key, tripInfo);
+let addToKey = parseInt(i+1);
+let key = 'tripInfo'+ addToKey;
+return saveItem(key, tripInfo);
 
 }
 

@@ -28,14 +28,12 @@ for(let i = 0; i <= tripsArray.length-1; i++){
   </div>
   <div class="btns-wrap">
   <button class="btn trip-btn" onclick="return Client.removeEntry(${i})">Remove</button>
-  <button class="btn trip-btn">Add To-Do List</button>
+  <button class="btn trip-btn"> To-Do List</button>
   </div>`;
 tripsDiv.appendChild(newEl);
 };
 const tripsDivContent = tripsDiv.innerHTML;
 tripsDiv.innerHTML = tripsDivContent.replace(/\n/g, '<br />');
-
-console.log('done');
 };
 
 //Get from local storage only necessary items:

@@ -10,10 +10,16 @@ import { clickEvent } from './js/handleInput.js';
 import { handleInput } from './js/handleInput.js';
 import { saveTrip } from './js/saveTrip.js';
 import { displayTrips } from './js/displayTrips.js';
+import { removeEntry } from './js/removeEntry.js';
+import manageData from './js/displayTrips.js';
+import { tripsArray } from './js/displayTrips.js';
 
 export {
   clickEvent,
   handleInput,
   saveTrip,
-  displayTrips
+  displayTrips,
+  removeEntry,
+  manageData,
+  tripsArray
 }

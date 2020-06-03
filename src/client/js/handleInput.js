@@ -1,6 +1,13 @@
 function clickEvent(){
-  handleInput();
-  };
+  const input1 = document.getElementsByClassName('input')[0].value;
+  const input2 = document.getElementsByClassName('input')[1].value;
+    if(input1 && input2 !== ""){
+      return handleInput();
+    }else{
+      location.reload();
+      return;
+  }
+};
 
 function handleInput(){
 

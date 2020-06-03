@@ -12,6 +12,7 @@ main {
 
 h2 {
   font-size: 2rem;
+  margin-top: 5rem;
 }
 
 .form {
@@ -94,6 +95,30 @@ h2 {
 //trips
 
 #trips{
+  background-color: rgba(73,188,119, 0.8);
+  margin-top: 3.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotels{
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.trip-btn{
+  font-size: 0.8rem;
+}
+
+.btns-wrap{
   display: flex;
   flex-direction: column;
 }

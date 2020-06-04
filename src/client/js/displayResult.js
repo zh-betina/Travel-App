@@ -17,7 +17,7 @@ function displayResult(res, dataSet){
     <img id="country-pic" src="${dataSet.picUrl}" alt="Photo of the destination"/>
     <h3>Forecast</h3>
     <div id="weather">
-      <p>${dataSet.temp}°C</p>
+      <p>${dataSet.temp}°C <span class="fas fa-temperature-high"></span></p>
       <p>${dataSet.weather}</p>
     </div>
     <h3>Top cheapest hotel deals</h3>
@@ -39,13 +39,12 @@ function displayResult(res, dataSet){
     let deal = [res[i].offers[0].price.total, res[i].offers[0].price.currency];
     let address = `<p class="bold">Address:</p>
     <p>${res[i].hotel.address.lines[0]}</p>
-    <p class="bold">Postal code:</p>
-    <p>${res[i].hotel.address.postalCode}</p>
-    <p>${res[i].hotel.address.cityName}</p>`;
-    const elContent = `<p>${hotelName}</p>
+    <span>Postal code: ${res[i].hotel.address.postalCode}, ${res[i].hotel.address.cityName}</span>`;
+    const elContent = `<p class="bold">${hotelName}</p>
       <i class="fas fa-h-square"></i>
       <p>${address}</p>
       <p>Average estimated price per night for 1 adult:</p>
+      <span class="fas fa-money-check-alt"></span>
       <p>${deal}</p>
       <hr>`;
 

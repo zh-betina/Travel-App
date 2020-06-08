@@ -25,8 +25,8 @@ function displayResult(res, dataSet){
     </div>
     <div id="options-buttons">
       <button class="btn" id="save" onclick="return Client.saveTrip()">Save this trip</button>
-      <!-- TODO: change this onclick for sth else (<a>? external function?)-->
-      <button class="btn" id="cancel" onclick="window.location='/'">Cancel</button>
+      <button class="btn" id="cancel"><a href="/">Cancel</a></button>
+      <button class="btn" id="print" onclick="window.print()">Print</button>
     </div>
   </div>`;
   document.getElementById('main').innerHTML = aboutPlace;
@@ -56,6 +56,7 @@ function displayResult(res, dataSet){
     newEl.classList.add('hotel');
     };
   };
+  document.getElementById('main').classList.add('trip-box');
 };
 
 export { displayResult };

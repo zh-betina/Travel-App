@@ -9,15 +9,18 @@ function clickEvent(){
   }
 };
 
+let dataSet = {};
+
 function handleInput(){
 
-let dataSet = {};
 let geonamesRes;
 let weatherData;
 let picData;
-const placeName = document.getElementById('place').value;
+let placeName = document.getElementById('place').value;
+placeName = placeName.replace(/ /g, '+');
 const date = document.getElementById('date').value;
 const geonamesUrl = `http://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
+placeName = placeName.replace(/\+/g, ' ');
 dataSet = {
   'city': placeName,
   'date': date
@@ -44,7 +47,7 @@ getAPIdata(geonamesUrl, geonamesRes)
   const key = `&key=8b8571fff1e64adeab1381af83e01d85`;
   const urlCurrent = `https://api.weatherbit.io/v2.0/current?${coord}${key}`;
   const urlFuture = `https://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
-  if(dataSet.daysDiff<=7 && dataSet.daysDiff>=0){
+  if(dataSet.daysDiff<=14 && dataSet.daysDiff>=0){
     return getAPIdata(urlCurrent, weatherData);
   } else {
     return getAPIdata(urlFuture, weatherData);
@@ -72,9 +75,6 @@ return postToServer(url = 'http://localhost:8081/post', data = {dataSet});
 .then(res=>{
 return displayResult(res, dataSet);
 });
-  // TODO:
-  //Divide to smaller functions.
-  //Fix the SPACE in the city names problem.
 };
 
 
@@ -87,3 +87,4 @@ import { displayResult } from './displayResult.js';
 
 export { clickEvent }
 export { handleInput }
+export { dataSet }

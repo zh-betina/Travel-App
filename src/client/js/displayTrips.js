@@ -9,6 +9,7 @@ const tripsDiv = document.getElementById('trips');
 let storageObject = {};
 manageData(storageObject, tripsArray);
 
+console.log(tripsArray);
 for(let i = 0; i <= tripsArray.length-1; i++){
   let newEl = document.createElement('div');
   newEl.classList.add('trip-box');
@@ -17,19 +18,26 @@ for(let i = 0; i <= tripsArray.length-1; i++){
   let parsedAr = JSON.parse(neededData[1]);
 
   let contentDest = parsedAr.destination;
-  let contentPic = parsedAr.photo;
+  let date = parsedAr.date;
   let contentWeather = parsedAr.weather;
+  let temp = parsedAr.temp;
+  let contentPic = parsedAr.photo;
   let contentHotels = parsedAr.hotels;
-  newEl.innerHTML = `<p>${contentDest}</p>
+  newEl.innerHTML =
+  `<h3>${contentDest}</h3>
+  <p>${date}</p>
+  <div class="box-wrapper">
   <p>${contentWeather}</p>
+  <p>${temp}°C</p>
+  </div>
   ${contentPic}
   <div class="hotels">
-  <p>${contentHotels}</p>
+  ${contentHotels}
   </div>
   <div class="btns-wrap">
   <button class="btn trip-btn" onclick="return Client.removeEntry(${i})">Remove</button>
-  <button class="btn trip-btn"> To-Do List</button>
-  </div>`;
+  </div>
+  <hr class="line">`;
 tripsDiv.appendChild(newEl);
 };
 const tripsDivContent = tripsDiv.innerHTML;

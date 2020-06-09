@@ -1,3 +1,6 @@
+$navClr: #595646;
+$buttonsClr: #261417;
+$navTxtClr: #F2F2F2;
 
 html {
 
@@ -6,12 +9,13 @@ html {
   margin: 0;
   padding: 0;
   width: 100vw;
+  max-width: 100vw;
 }
 /*Mobile-first Layout*/
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   background-image: url('../media/bgr-mobile.png');
   background-repeat: no-repeat;
@@ -21,17 +25,32 @@ body {
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
-
   z-index: 0;
+}
+
+a{
+  text-decoration: none;
+  color: $navTxtClr;
+}
+a:link{
+  text-decoration: none;
+  color: $navTxtClr;
+}
+
+.line{
+  height: 3px;
+  width: 60vw;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .bgr-box{
   max-width: 60vw;
   text-align: center;
-}
-
-.bold{
-  font-weight: 500; 
 }
 
 /*Larger screens*/
@@ -45,5 +64,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+  }
+  h2 {
+    margin-top: 10rem;
+  }
+  .bgr-box{
+    max-width: 80vw;
   }
 }

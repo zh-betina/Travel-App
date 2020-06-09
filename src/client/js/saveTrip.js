@@ -1,23 +1,27 @@
 import { displayResult } from './displayResult.js';
 import { saveItem } from './saveItem.js';
 
-// TODO: Change function name
 function saveTrip(){
 
+const data = Client.dataSet;
 const hotels = [];
-const destination = document.getElementById('dest-info').innerText;
+const destination = `${data.city}, ${data.country}`;
 const pic = document.getElementById('country-pic').outerHTML;
-const weather = document.getElementById('weather').innerText;
+const date = data.date;
+const weather = data.weather;
+const temp = data.temp;
 const hotel = document.getElementsByClassName('hotel');
 
 for(let i=0; i<= hotel.length-1; i++){
-const hotelText = hotel[i].innerText;
+const hotelText = hotel[i].innerHTML;
 hotels.push(hotelText);
 };
 
 let tripInfo = {
   'destination': destination,
+  'date': date,
   'photo': pic,
+  'temp': temp,
   'weather': weather,
   'hotels': hotels
 }

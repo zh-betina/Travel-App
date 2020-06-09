@@ -5,14 +5,15 @@ import './styles/footer.scss';
 import bgr from './media/bgr.png';
 import bgrMobile from './media/bgr-mobile.png';
 import logo from './media/logo.png';
+import loader from './media/loader.gif';
 
-import { clickEvent } from './js/handleInput.js';
-import { handleInput } from './js/handleInput.js';
+import { clickEvent, handleInput } from './js/handleInput.js';
+//import { handleInput } from './js/handleInput.js';
 import { saveTrip } from './js/saveTrip.js';
-import { displayTrips } from './js/displayTrips.js';
+import { displayTrips, tripsArray } from './js/displayTrips.js';
 import { removeEntry } from './js/removeEntry.js';
 import manageData from './js/displayTrips.js';
-import { tripsArray } from './js/displayTrips.js';
+import { dataSet } from './js/handleInput.js';
 
 export {
   clickEvent,
@@ -21,5 +22,8 @@ export {
   displayTrips,
   removeEntry,
   manageData,
-  tripsArray
+  tripsArray,
+  dataSet
 }
+
+// TODO: Get dataSet to saveTrip()

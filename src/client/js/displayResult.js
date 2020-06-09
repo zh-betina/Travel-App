@@ -13,20 +13,28 @@ function displayResult(res, dataSet){
     <h3>Departure date:</h3>
     <p>${dataSet.date}</p>
   </div>
-  <div id="results">
-    <img id="country-pic" src="${dataSet.picUrl}" alt="Photo of the destination"/>
-    <h3>Forecast</h3>
-    <div id="weather">
-      <p>${dataSet.temp}°C <span class="fas fa-temperature-high"></span></p>
-      <p>${dataSet.weather}</p>
-    </div>
-    <h3>Top cheapest hotel deals</h3>
-    <div id="hotel-deals">
-    </div>
-    <div id="options-buttons">
-      <button class="btn" id="save" onclick="return Client.saveTrip()">Save this trip</button>
-      <button class="btn" id="cancel"><a href="/">Cancel</a></button>
-      <button class="btn" id="print" onclick="window.print()">Print</button>
+  <div class="box-wrapper">
+    <div class="box">
+      <div id="results">
+        <img id="country-pic" src="${dataSet.picUrl}" alt="Photo of the destination"/>
+        <div class="box-wrapper">
+          <h3>Forecast</h3>
+          <div id="weather">
+            <p>${dataSet.temp}°C <span class="fas fa-temperature-high"></span></p>
+            <p>${dataSet.weather}</p>
+          </div>
+        </div>
+        <div class="box-wrapper">
+          <h3>Top cheapest hotel deals</h3>
+          <div id="hotel-deals">
+          </div>
+        </div>
+      </div>
+      <div class="box" id="options-buttons">
+        <button class="btn" id="save" onclick="return Client.saveTrip()">Save this trip</button>
+        <button class="btn" id="cancel"><a href="/">Cancel</a></button>
+        <button class="btn" id="print" onclick="window.print()">Print</button>
+      </div>
     </div>
   </div>`;
   document.getElementById('main').innerHTML = aboutPlace;
@@ -56,7 +64,7 @@ function displayResult(res, dataSet){
     newEl.classList.add('hotel');
     };
   };
-  document.getElementById('main').classList.add('trip-box');
+  //document.getElementById('main').classList.add('trip-box');
 };
 
 export { displayResult };

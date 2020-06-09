@@ -16,9 +16,9 @@
 
 # Media:
 
-* Free Vectors:
-[Background img](https://all-free-download.com/free-vector/download/landscape-background-green-trees-car-icon-cartoon-design_6835637.html),
-[Img for logo](https://all-free-download.com/free-vector/download/modern-traveling-icons-vector-set_583279.html),
+* [Pexels - bgr image](https://www.pexels.com/photo/backpack-bag-blur-commuter-346768/),
+* [Img for logo](https://icons8.com/icon/112479/around-the-globe),
+* [Loader from Icons8](https://icons8.com/preloaders/)
 
 
 # Software:

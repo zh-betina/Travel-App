@@ -18,23 +18,46 @@
       </div>
       <div id="menu">
         <!--Button for mobile-friendly layout-->
-        <button class="menu-btn">Menu</button>
+        <button id="mobile-menu-btn" class="menu-btn">Menu</button>
         <div id="dropdown-menu">
-          <ul>
-            <li class="menu-link"><a href="/">Home</a></li>
-            <li class="menu-link"><a href="/about">About</a></li>
-            <li class="menu-link"><a href="/guide">Guide</a></li>
-            <li class="menu-link"><a href="/trips">My Trips</a></li>
+          <ul id="menu-links">
+            <li><a class="menu-link" href="/">Home</a></li>
+            <li><a class="menu-link" href="/about">About</a></li>
+            <li><a class="menu-link" href="/guide">Guide</a></li>
+            <li><a class="menu-link" href="/trips">My Trips</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <main id='main'>
-      <p>About</p>
+      <article class="trip-box">
+        <h2>TripPrepper App</h2>
+        <p>The <em>TripPrepper App</em> is a tool created in the learning process of the
+        Front-End Development course from <em>Udacity</em>. It allows you to get general
+        information about a given destination on a given date with possible hotel options
+        and weather information. However, take into account that hotel pricing information might
+        be not accurate and it is highly recommended to contact the chosen hotel stuff directly.
+        The hotel information is to provide a general idea and propose some spots but by no means
+        it replaces the actual room booking.</p>
+        <h3>Stored in your browser memory...</h3>
+        <p>The trips saved in the <em>My Trips</em> section are not stored in any database.
+          If you clear your cache, your trip entries will disappear as it is the memory of your
+          browser being used for saving and displaying those.</p>
+        <hr class="line">
+        <p>For instructions on <em>how to use it</em>, see <a href="/guide.html">Guide</a>.</p>
+      </article>
     </main>
 
     <footer>
-      Footer's here.
+      <div>
+        Betina Zhou <a href="https://github.com/zh-betina"><span class="fab fa-github"></span></a> - 2020 for Udacity FEND Project
+      </div>
+      <div class="box-wrapper">
+        <a href="https://www.weatherbit.io/">WeatherBit</a>
+        <a href="https://www.weatherbit.io/">GeoNames</a>
+        <a href="https://pixabay.com/service/about/api/">Pixabay API</a>
+        <a href="https://developers.amadeus.com/">Amadeus API</a>
+      </div>
     </footer>
 
   </body>

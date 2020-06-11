@@ -7,6 +7,8 @@ $navTxtClr: #F2F2F2;
 
 /*Mobile-first*/
 nav {
+  box-sizing: border-box;
+  margin-left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -110,6 +112,7 @@ h1 {
   background-color: $buttonsClr;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  cursor: pointer;
 }
 
 .menu-link:link,

@@ -1,4 +1,5 @@
 import { handleInput } from './handleInput.js';
+import weatherIcon from '../media/weatherIcon.png';
 
 function displayResult(res, dataSet){
   let dayS;
@@ -18,8 +19,9 @@ function displayResult(res, dataSet){
       <div id="results">
         <img id="country-pic" src="${dataSet.picUrl}" alt="Photo of the destination"/>
         <div class="box-wrapper">
-          <h3>Forecast</h3>
+          <h3>Current weather conditions</h3>
           <div id="weather">
+            <img id="weather-icon" src="${weatherIcon}" alt="Weather icon"/>
             <p>${dataSet.temp}°C <span class="fas fa-temperature-high"></span></p>
             <p>${dataSet.weather}</p>
           </div>
@@ -30,9 +32,9 @@ function displayResult(res, dataSet){
           </div>
         </div>
       </div>
-      <div class="box" id="options-buttons">
+      <div id="options-buttons">
         <button class="btn" id="save" onclick="return Client.saveTrip()">Save this trip</button>
-        <button class="btn" id="cancel"><a href="/">Cancel</a></button>
+        <a href="/"><button class="btn" id="cancel">Cancel</button></a>
         <button class="btn" id="print" onclick="window.print()">Print</button>
       </div>
     </div>

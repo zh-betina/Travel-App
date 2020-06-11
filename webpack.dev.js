@@ -17,10 +17,6 @@ module.exports = {
     '/trips': {
       target: 'http://localhost:8081/',
       secure: false
-    },
-    '/guide': {
-      target: 'http://localhost:8081/',
-      secure: false
     }
   }
 },

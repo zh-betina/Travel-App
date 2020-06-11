@@ -18,7 +18,9 @@
 
 * [Pexels - bgr image](https://www.pexels.com/photo/backpack-bag-blur-commuter-346768/),
 * [Img for logo](https://icons8.com/icon/112479/around-the-globe),
-* [Loader from Icons8](https://icons8.com/preloaders/)
+Icons8:
+* [Loader](https://icons8.com/preloaders/),
+* [Weather icons](https://icons8.com/icon/set/weather/dotty)
 
 
 # Software:

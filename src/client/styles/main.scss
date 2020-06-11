@@ -1,7 +1,7 @@
 $boxClr: rgba(89, 86, 70, 0.7);
 $buttonsClr: #261417;
+$btnsHov: rgb(89, 86, 70);
 $txtClr: #F2F2F2;
-
 
 main {
   margin-top: 2rem;
@@ -16,6 +16,12 @@ main {
   margin-bottom: 8rem;
 }
 
+.main-about{
+  background-color: $boxClr;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -26,6 +32,10 @@ main {
     text-align: center;
     font-size: 1.4rem;
   }
+}
+
+article > div{
+  padding: 0.8rem;
 }
 
 .hidden{
@@ -47,7 +57,7 @@ main {
 
 .btn {
   border-radius: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-top: 2rem;
   background-color: $buttonsClr;
   height: 3rem;
@@ -55,14 +65,14 @@ main {
   border-style: solid;
   border-width: medium;
   border-color: black;
-  width: 25vw;
+  width: 10rem;
   align-self: center;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
 }
 
 .btn:hover {
-  border-style: dashed;
-  font-size: 2.1rem;
+  background-color: $btnsHov;
+  cursor: pointer;
 }
 
 .loading{
@@ -76,7 +86,6 @@ main {
   height: 5rem;
   z-index: 2;
 }
-
 //search results
 
 #dest-info{
@@ -131,6 +140,8 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
   margin-top: 2rem;
   max-height: 15rem;
   overflow-y: scroll;
@@ -139,10 +150,10 @@ main {
 .trip-box{
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   background-color: $boxClr;
-  //margin: 0.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
+  padding-top: 3rem;
 }
 
 .trip-btn{
@@ -157,12 +168,16 @@ main {
 
 #options-buttons{
   padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .bold{
   font-weight: 900;
   text-align: center;
 }
+
+//Larger screens settings:
 
 @media (min-width: 900px){
   main{
@@ -174,21 +189,33 @@ main {
     max-width: 40vw;
     max-height: auto;
   }
-  #trips{
-    width: 70vw;
+  #options-buttons{
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .box-wrapper{
-    display: flex;
+  #trips{
+    width: 90vw;
     flex-direction: column;
-    padding: 1rem;
   }
   #results{
     flex-direction: row;
     align-items: flex-start;
     width: 80vw;
   }
+  article{
+    display: flex;
+    flex-direction: row;
+    align-content: first baseline;
+    text-align: justify;
+    width: 80vw;
+    padding: 0.5rem;
+      h2{
+        margin-top: 2rem;
+    }
+  }
 }
 
+//Settings for printed content:
 @media print{
   nav,
   button,
@@ -207,7 +234,5 @@ main {
     //width: 80vw;
     //font-size: 8px;
     //flex-direction: row;
-
-
   }
 }

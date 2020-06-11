@@ -1,3 +1,5 @@
+import weatherIcon from '../media/weatherIcon.png';
+
 //Global variables:
 let tripsArray = [];
 
@@ -25,19 +27,20 @@ for(let i = 0; i <= tripsArray.length-1; i++){
   let contentHotels = parsedAr.hotels;
   newEl.innerHTML =
   `<h3>${contentDest}</h3>
+  <h4>Departure date:</h4>
   <p>${date}</p>
+  <hr class="line">
   <div class="box-wrapper">
-  <p>${contentWeather}</p>
-  <p>${temp}°C</p>
+    <img id="weather-icon" src="${weatherIcon}" alt="Weather icon">
+    <p>${temp}°C, ${contentWeather}</p>
   </div>
   ${contentPic}
   <div class="hotels">
-  ${contentHotels}
+    ${contentHotels}
   </div>
   <div class="btns-wrap">
-  <button class="btn trip-btn" onclick="return Client.removeEntry(${i})">Remove</button>
-  </div>
-  <hr class="line">`;
+    <button class="btn trip-btn" onclick="return Client.removeEntry(${i})">Remove</button>
+  </div>`;
 tripsDiv.appendChild(newEl);
 };
 const tripsDivContent = tripsDiv.innerHTML;

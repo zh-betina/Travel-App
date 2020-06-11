@@ -2,21 +2,25 @@ $navClr: #595646;
 $buttonsClr: #261417;
 $navTxtClr: #F2F2F2;
 
+html,
+body{
+  overflow-x: hidden;
+}
+
 html {
 
   font-size: 17px;
   height: 100%;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
 }
 /*Mobile-first Layout*/
 body {
   margin: 0;
-  padding: 0;
-  max-width: 100vw;
-  min-height: 100vh;
+  max-width: 100%;
+  min-height: 100%;
   background-image: url('../media/bgr-mobile.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -48,9 +52,28 @@ h2 {
   margin-top: 4rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
 .bgr-box{
   max-width: 60vw;
   text-align: center;
+}
+
+.box-wrapper{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+}
+
+#weather-icon{
+  max-width: 4rem;
+  height: auto;
+  align-self: center;
 }
 
 /*Larger screens*/
@@ -61,14 +84,20 @@ h2 {
   }
   body {
     background-image: url('../media/bgr.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    //background-repeat: no-repeat;
+    //background-attachment: fixed;
+    //background-size: cover;
   }
   h2 {
     margin-top: 10rem;
   }
   .bgr-box{
     max-width: 80vw;
+  }
+  .box-wrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
   }
 }

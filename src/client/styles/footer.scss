@@ -1,4 +1,5 @@
 $color: #595646;
+$buttonsClr: #261417;
 
 footer {
   background-color: $color;
@@ -7,23 +8,30 @@ footer {
   flex-direction: column;
   align-items: center;
   height: auto;
-  padding-top: 2rem;
   position: absolute;
   bottom: 0;
   width: 100vw;
 }
 
+.box-footer{
+  margin: 0.5rem;
+}
+
+.fa-github:hover{
+  cursor: pointer;
+  color: $buttonsClr;
+}
 .ftr-link::after{
-  content:  " | ";
+  content: " | ";
 }
 
 @media (min-width: 900px){
   footer{
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
-  .ftr-link::after{
-    content: none;
+  .box-footer{
+    margin: 2rem;
   }
 }

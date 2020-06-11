@@ -59,11 +59,6 @@ module.exports = {
         template: './src/client/views/mytrips.html',
         filename: './mytrips.html',
         minify: false
-      }),
-      new HtmlWebPackPlugin({
-        template: './src/client/views/guide.html',
-        filename: './guide.html',
-        minify: false
       })
     ]
 }

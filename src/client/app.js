@@ -11,6 +11,7 @@ import weatherIcon from './media/weatherIcon.png';
 import { clickEvent, handleInput } from './js/handleInput.js';
 import { saveTrip } from './js/saveTrip.js';
 import { displayTrips, tripsArray } from './js/displayTrips.js';
+import { longTermWeather } from './js/longTermWeather.js';
 import { removeEntry } from './js/removeEntry.js';
 import manageData from './js/displayTrips.js';
 import { dataSet } from './js/handleInput.js';
@@ -21,6 +22,7 @@ export {
   saveTrip,
   displayTrips,
   removeEntry,
+  longTermWeather,
   manageData,
   tripsArray,
   dataSet

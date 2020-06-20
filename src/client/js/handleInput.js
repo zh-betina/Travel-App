@@ -54,9 +54,14 @@ getAPIdata(geonamesUrl, geonamesRes)
   }
 })
 .then(weatherData=>{
-  dataSet.weather = weatherData.data[0].weather.description;
-  dataSet.temp = weatherData.data[0].temp;
-  return dataSet;
+
+  if(weatherData.data.length !=0){
+    return longTermWeather(weatherData, dataSet);
+  }else{
+    dataSet.weather = weatherData.data[0].weather.description;
+    dataSet.temp = weatherData.data[0].temp;
+    return dataSet;
+}
 })
 .then(dataSet=>{
   let urlPixabay;
@@ -81,9 +86,11 @@ return displayResult(res, dataSet);
 
 import { getAPIdata } from './getAPIdata.js';
 import { daysDiff } from './daysDiff.js';
+import { longTermWeather } from './longTermWeather.js';
 import { randomPic } from './randomPic.js';
 import { postToServer } from './postToServer.js';
 import { displayResult } from './displayResult.js';
+
 
 export { clickEvent }
 export { handleInput }

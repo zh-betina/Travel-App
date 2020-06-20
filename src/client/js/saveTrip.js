@@ -5,11 +5,11 @@ function saveTrip(){
 
 const data = Client.dataSet;
 const hotels = [];
+//const weatherInfo = [];
 const destination = `${data.city}, ${data.country}`;
 const pic = document.getElementById('country-pic').outerHTML;
 const date = data.date;
-const weather = data.weather;
-const temp = data.temp;
+const weather = document.getElementById('weather').innerHTML;
 const hotel = document.getElementsByClassName('hotel');
 
 for(let i=0; i<= hotel.length-1; i++){
@@ -21,7 +21,6 @@ let tripInfo = {
   'destination': destination,
   'date': date,
   'photo': pic,
-  'temp': temp,
   'weather': weather,
   'hotels': hotels
 }

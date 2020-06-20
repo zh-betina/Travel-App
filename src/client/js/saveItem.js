@@ -7,7 +7,7 @@ console.log('saved');
 
 document.getElementById('options-buttons').innerHTML =
 `<p>✅ <b>Your trip has been successfully saved.</b> ✅</p>";
-<button class="btn"><a href="/">Back to searching</a></button>`;
+<a href="/"><button class="btn">Back to searching</button></a>`;
 }
 
 export { saveItem };

@@ -10,6 +10,8 @@ const tripsDiv = document.getElementById('trips');
 
 let storageObject = {};
 manageData(storageObject, tripsArray);
+//    <img id="weather-icon" src="${weatherIcon}" alt="Weather icon">
+//     <p>${temp}°C, ${contentWeather}</p>
 
 console.log(tripsArray);
 for(let i = 0; i <= tripsArray.length-1; i++){
@@ -22,7 +24,7 @@ for(let i = 0; i <= tripsArray.length-1; i++){
   let contentDest = parsedAr.destination;
   let date = parsedAr.date;
   let contentWeather = parsedAr.weather;
-  let temp = parsedAr.temp;
+  //let temp = parsedAr.temp;
   let contentPic = parsedAr.photo;
   let contentHotels = parsedAr.hotels;
   newEl.innerHTML =
@@ -30,11 +32,12 @@ for(let i = 0; i <= tripsArray.length-1; i++){
   <h4>Departure date:</h4>
   <p>${date}</p>
   <hr class="line">
-  <div class="box-wrapper">
-    <img id="weather-icon" src="${weatherIcon}" alt="Weather icon">
-    <p>${temp}°C, ${contentWeather}</p>
-  </div>
   ${contentPic}
+  <div class="box-wrapper">
+    <h3>Forecast</h3>
+    <div class="weather-entries">${contentWeather}</div>
+  </div>
+  <h3>Hotels</h3>
   <div class="hotels">
     ${contentHotels}
   </div>

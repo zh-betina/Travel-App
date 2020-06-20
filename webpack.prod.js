@@ -48,17 +48,17 @@ module.exports = {
       new HtmlWebPackPlugin({
         template: './src/client/views/index.html',
         filename: './index.html',
-        minify: false
+        minify: true
       }),
       new HtmlWebPackPlugin({
         template: './src/client/views/about.html',
         filename: './about.html',
-        minify: false
+        minify: true
       }),
       new HtmlWebPackPlugin({
         template: './src/client/views/mytrips.html',
         filename: './mytrips.html',
-        minify: false
+        minify: true
       })
     ]
 }

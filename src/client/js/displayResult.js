@@ -32,7 +32,6 @@ function displayResult(res, dataSet){
       <div id="options-buttons">
         <button class="btn" id="save" onclick="return Client.saveTrip()">Save this trip</button>
         <a href="/"><button class="btn" id="cancel">Cancel</button></a>
-        <button class="btn" id="print" onclick="window.print()">Print</button>
       </div>
     </div>
   </div>`;

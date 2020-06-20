@@ -172,6 +172,8 @@ article > div{
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
 .bold{
@@ -214,27 +216,5 @@ article > div{
       h2{
         margin-top: 2rem;
     }
-  }
-}
-
-//Settings for printed content:
-@media print{
-  nav,
-  button,
-  footer,
-  #country-pic{
-    display: none;
-  }
-  #main{
-    margin-top: -5rem;
-    font-size: 10px;
-    height: 100%;
-  }
-  #results{
-    //height: 100%;
-    //margin-top: 0%;
-    //width: 80vw;
-    //font-size: 8px;
-    //flex-direction: row;
   }
 }

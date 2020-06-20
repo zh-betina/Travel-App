@@ -54,7 +54,6 @@ getAPIdata(geonamesUrl, geonamesRes)
   }
 })
 .then(weatherData=>{
-
   if(weatherData.data.length !=0){
     return longTermWeather(weatherData, dataSet);
   }else{

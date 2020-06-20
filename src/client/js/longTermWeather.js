@@ -9,7 +9,6 @@ function longTermWeather(weatherData, dataSet){
     dataSet.weather.push(weatherData.data[i].weather.description);
     dataSet.temp.push(weatherData.data[i].temp);
   }
-  console.log(dataSet);
   return dataSet;
 }
 

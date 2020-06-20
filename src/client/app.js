@@ -15,6 +15,7 @@ import { longTermWeather } from './js/longTermWeather.js';
 import { removeEntry } from './js/removeEntry.js';
 import manageData from './js/displayTrips.js';
 import { dataSet } from './js/handleInput.js';
+import { hotelsEl, weatherEl } from './js/hotelWeatherEntries.js';
 
 export {
   clickEvent,
@@ -25,5 +26,7 @@ export {
   longTermWeather,
   manageData,
   tripsArray,
-  dataSet
+  dataSet,
+  hotelsEl,
+  weatherEl
 }

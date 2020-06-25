@@ -19,7 +19,7 @@ let picData;
 let placeName = document.getElementById('place').value;
 placeName = placeName.replace(/ /g, '+');
 const date = document.getElementById('date').value;
-const geonamesUrl = `http://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
+const geonamesUrl = `https://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
 placeName = placeName.replace(/\+/g, ' ');
 dataSet = {
   'city': placeName,
@@ -74,7 +74,7 @@ return randomPic(picData, dataSet);
 .then(dataSet=>{
 let url;
 let data;
-return postToServer(url = 'http://localhost:8081/post', data = {dataSet});
+return postToServer(url = '/post', data = {dataSet});
 })
 .then(res=>{
 return displayResult(res, dataSet);

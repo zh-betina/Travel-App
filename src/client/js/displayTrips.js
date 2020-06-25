@@ -10,8 +10,6 @@ const tripsDiv = document.getElementById('trips');
 
 let storageObject = {};
 manageData(storageObject, tripsArray);
-//    <img id="weather-icon" src="${weatherIcon}" alt="Weather icon">
-//     <p>${temp}°C, ${contentWeather}</p>
 
 console.log(tripsArray);
 for(let i = 0; i <= tripsArray.length-1; i++){

@@ -5,7 +5,6 @@ function saveTrip(){
 
 const data = Client.dataSet;
 const hotels = [];
-//const weatherInfo = [];
 const destination = `${data.city}, ${data.country}`;
 const pic = document.getElementById('country-pic').outerHTML;
 const date = data.date;

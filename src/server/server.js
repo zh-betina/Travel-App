@@ -58,9 +58,3 @@ app.get('/trips', (req, res)=>{
 app.get('/about', (req, res)=>{
   res.sendFile('about.html', {root: './dist'});
 });
-
-//Guide routes
-
-app.get('/guide', (req, res)=>{
-  res.sendFile('guide.html', {root: './dist'})
-});

@@ -4,7 +4,7 @@ async function getAPIdata(url, data){
     const response = await fetch(url, {
       method: 'GET',
       mode: 'cors',
-      credentials: 'same-origin',
+      credentials: '*',
       header: {
         'Content-Type': 'application/json',
       },

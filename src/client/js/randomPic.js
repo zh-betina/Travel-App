@@ -10,7 +10,7 @@ if(picData.hits.length!==0){
   return dataSet;
 } else {
   const key = 'key=16579484-c9f74c18198f80193bbad71c6';
-  let urlPixabay = `http://pixabay.com/api/?${key}&q=${dataSet.country}`;
+  let urlPixabay = `https://pixabay.com/api/?${key}&q=${dataSet.country}`;
   picData = undefined;
   return getAPIdata(urlPixabay, picData).then(picData=>{
     return randomPic(picData, dataSet)

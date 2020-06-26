@@ -4,7 +4,7 @@ async function postToServer(url, data){
   const response = await fetch(url, {
     method: 'POST',
     mode: 'cors',
-    credentials: 'same-origin',
+    credentials: '*',
     headers: {
       'Content-Type': 'application/json'
     },

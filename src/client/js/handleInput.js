@@ -19,7 +19,7 @@ let picData;
 let placeName = document.getElementById('place').value;
 placeName = placeName.replace(/ /g, '+');
 const date = document.getElementById('date').value;
-const geonamesUrl = `https://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
+const geonamesUrl = `http://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
 placeName = placeName.replace(/\+/g, ' ');
 dataSet = {
   'city': placeName,
@@ -45,8 +45,8 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=> {
   const coord = `lat=${dataSet.lat}&lon=${dataSet.lng}`;
   const key = `&key=8b8571fff1e64adeab1381af83e01d85`;
-  const urlCurrent = `https://api.weatherbit.io/v2.0/current?${coord}${key}`;
-  const urlFuture = `https://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
+  const urlCurrent = `http://api.weatherbit.io/v2.0/current?${coord}${key}`;
+  const urlFuture = `http://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
   if(dataSet.daysDiff<=14 && dataSet.daysDiff>=0){
     return getAPIdata(urlCurrent, weatherData);
   } else {
@@ -65,7 +65,7 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=>{
   let urlPixabay;
   const key = 'key=16579484-c9f74c18198f80193bbad71c6';
-  urlPixabay = `https://pixabay.com/api/?${key}&q=${dataSet.city}`;
+  urlPixabay = `http://pixabay.com/api/?${key}&q=${dataSet.city}`;
 return getAPIdata(urlPixabay, picData);
 })
 .then(picData=>{

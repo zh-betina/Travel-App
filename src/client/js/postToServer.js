@@ -3,9 +3,9 @@ import { handleInput } from './handleInput.js';
 async function postToServer(url, data){
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'no-cors',
+    mode: 'cors',
     credentials: 'same-origin',
-    header: {
+    headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)

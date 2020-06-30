@@ -5,7 +5,7 @@ async function postToServer(url, data){
     method: 'POST',
     mode: 'no-cors',
     credentials: 'same-origin',
-    headers: {
+    header: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)

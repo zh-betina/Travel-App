@@ -17,6 +17,10 @@ module.exports = {
     '/trips': {
       target: 'http://localhost:8081/',
       secure: false
+    },
+    '/post': {
+      target: 'http://localhost:8081/',
+      secure: false
     }
   }
 },

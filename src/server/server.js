@@ -21,7 +21,7 @@ app.use(express.static('dist'));
 
 
 
-app.listen(process.env.PORT, ()=>{console.log('Running')});
+app.listen(process.env.PORT || 8081, ()=>{console.log('Running')});
 
 //Home page routes
 app.get('/', (req,res)=>{

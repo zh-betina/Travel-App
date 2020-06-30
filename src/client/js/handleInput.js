@@ -66,7 +66,7 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=>{
   let urlPixabay;
   const key = 'key=16579484-c9f74c18198f80193bbad71c6';
-  urlPixabay = `http://pixabay.com/api/?${key}&q=${dataSet.city}`;
+  urlPixabay = `https://cors-anywhere.herokuapp.com/https://pixabay.com/api/?${key}&q=${dataSet.city}`;
 return getAPIdata(urlPixabay, picData);
 })
 .then(picData=>{

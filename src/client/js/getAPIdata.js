@@ -3,11 +3,11 @@ import { handleInput } from './handleInput.js'
 async function getAPIdata(url, data){
     const response = await fetch(url, {
       method: 'GET',
-      //mode: 'no-cors',
+      mode: 'cors',
       //credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': "*"
       },
       body: JSON.stringify(data)
     });

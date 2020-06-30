@@ -27,15 +27,16 @@ dataSet = {
 };
 getAPIdata(geonamesUrl, geonamesRes)
 .then(geonamesRes=> {
+  console.log(geonamesRes);
   document.getElementById('plan-trip-section').classList.add('hidden');
   document.getElementById('loader').classList.remove('hidden');
   //const lat = geonamesRes.geonames[0].lat;
-  const lng = geonamesRes.geonames[0].lng;
-  const country = geonamesRes.geonames[0].countryName;
-  dataSet.country = country;
-  dataSet.lat = lat;
-  dataSet.lng = lng;
-  return dataSet;
+  //const lng = geonamesRes.geonames[0].lng;
+  //const country = geonamesRes.geonames[0].countryName;
+  //dataSet.country = country;
+  //dataSet.lat = lat;
+  //dataSet.lng = lng;
+  //return dataSet;
 })
 .then(dataSet=> {
   const getNowDate = new Date();

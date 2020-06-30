@@ -37,8 +37,9 @@ function displayResult(res, dataSet){
   </div>`;
 
 document.getElementById('main').innerHTML = aboutPlace;
-hotelsEl(res, dataSet, aboutPlace);
 weatherEl(res, dataSet, aboutPlace);
+hotelsEl(res, dataSet, aboutPlace);
+
 
 };
 

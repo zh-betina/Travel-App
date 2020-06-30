@@ -3,30 +3,35 @@ import weatherIcon from '../media/weatherIcon.png';
 
 function hotelsEl(res, dataSet, aboutPlace){
 
+
     if (res[0] != undefined){
-      for(let i = 0; i <= 3; i++){
-    let hotelName = [res[i].hotel.name];
-    let deal = [res[i].offers[0].price.total, res[i].offers[0].price.currency];
-    let address = `<p class="bold">Address:</p>
-    <p>${res[i].hotel.address.lines[0]}</p>
-    <span>Postal code: ${res[i].hotel.address.postalCode}, ${res[i].hotel.address.cityName}</span>`;
-    const elContent = `<p class="bold">${hotelName}</p>
-      <i class="fas fa-h-square"></i>
-      <p>${address}</p>
-      <p>Average estimated price per night for 1 adult:</p>
-      <span class="fas fa-money-check-alt"></span>
-      <p>${deal}</p>
-      <hr>`;
+      let loopNb = res.length - 1;
+      if(loopNb > 3){
+        loopNb = 3
+      };
+      for(let i = 0; i <= loopNb; i++){
+        let hotelName = res[i].hotel.name;
+        let deal = `${res[i].offers[0].price.total}, ${res[i].offers[0].price.currency}`;
+        let address = `<p class="bold">Address:</p>
+        <p>${res[i].hotel.address.lines[0]}</p>
+        <span>Postal code: ${res[i].hotel.address.postalCode}, ${res[i].hotel.address.cityName}</span>`;
+        const elContent = `<p class="bold">${hotelName}</p>
+          <i class="fas fa-h-square"></i>
+          <p>${address}</p>
+          <p>Average estimated price per night for 1 adult:</p>
+          <span class="fas fa-money-check-alt"></span>
+          <p>${deal}</p>
+          <hr>`;
 
-    let newEl = document.createElement('div');
-    newEl.innerHTML = elContent;
+        let newEl = document.createElement('div');
+        newEl.innerHTML = elContent;
 
-    document.getElementById('hotel-deals').appendChild(newEl);
-    newEl.classList.add('hotel');
-    };
-  }else{
-    return
-  };
+        document.getElementById('hotel-deals').appendChild(newEl);
+        newEl.classList.add('hotel');
+      };
+    }else{
+      return
+   };
 }
 
 function weatherEl(res, dataSet, aboutPlace, aboutWeather){

@@ -19,7 +19,7 @@ let picData;
 let placeName = document.getElementById('place').value;
 placeName = placeName.replace(/ /g, '+');
 const date = document.getElementById('date').value;
-const geonamesUrl = `http://api.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
+const geonamesUrl = `secure.geonames.org/searchJSON?q=${placeName}&maxRows=1&username=zh.betina`;
 placeName = placeName.replace(/\+/g, ' ');
 dataSet = {
   'city': placeName,

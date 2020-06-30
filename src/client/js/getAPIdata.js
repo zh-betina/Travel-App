@@ -12,7 +12,11 @@ async function getAPIdata(url, data){
       body: JSON.stringify(data)
     });
     try{
+      console.log("response:");
+      console.log(response);
       const data = await response.json();
+      console.log("data:");
+      console.log(data);
       return data;
     }catch(error){
       console.log('When GETting data from the API, an error occured: ', error);

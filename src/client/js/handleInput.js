@@ -46,8 +46,8 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=> {
   const coord = `lat=${dataSet.lat}&lon=${dataSet.lng}`;
   const key = `&key=8b8571fff1e64adeab1381af83e01d85`;
-  const urlCurrent = `http://api.weatherbit.io/v2.0/current?${coord}${key}`;
-  const urlFuture = `http://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
+  const urlCurrent = `https://api.weatherbit.io/v2.0/current?${coord}${key}`;
+  const urlFuture = `https://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
   if(dataSet.daysDiff<=14 && dataSet.daysDiff>=0){
     return getAPIdata(urlCurrent, weatherData);
   } else {

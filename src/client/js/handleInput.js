@@ -29,7 +29,7 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(geonamesRes=> {
   document.getElementById('plan-trip-section').classList.add('hidden');
   document.getElementById('loader').classList.remove('hidden');
-  const lat = geonamesRes.geonames[0].lat;
+  //const lat = geonamesRes.geonames[0].lat;
   const lng = geonamesRes.geonames[0].lng;
   const country = geonamesRes.geonames[0].countryName;
   dataSet.country = country;

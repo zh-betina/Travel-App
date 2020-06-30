@@ -7,6 +7,7 @@ async function getAPIdata(url, data){
       credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(data)
     });

@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
 
 module.exports = {
     mode: 'production',
@@ -59,6 +61,7 @@ module.exports = {
         template: './src/client/views/mytrips.html',
         filename: './mytrips.html',
         minify: true
-      })
+      }),
+      new WorkboxPlugin.GenerateSW()
     ]
 }

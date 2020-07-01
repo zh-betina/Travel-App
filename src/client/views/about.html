@@ -61,6 +61,12 @@
         <a href="https://developers.amadeus.com/">Amadeus API</a>
       </div>
     </footer>
-
+    <script>
+      if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      };
+    </script>
   </body>
 </html>

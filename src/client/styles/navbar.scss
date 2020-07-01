@@ -63,14 +63,17 @@ h1 {
 }
 
 .menu-btn {
-  font-size: 2rem;
+  align-self: baseline;
+  font-size: 1.3rem;
+  margin-left: 2.1rem;
+  margin-top: 0.5rem;
   padding: 0.5rem;
   background-color: $buttonsClr;
   border-style: none;
   border-radius: 0.5rem;
   color: $navTxtClr;
   animation-duration: 0.6s;
-  min-width: 3rem;
+  width: 8rem;
 }
 
 #dropdown-menu{
@@ -78,20 +81,23 @@ h1 {
   background-color: $buttonsClr;
   z-index: 5;
   border-radius: 0.5rem;
+  width: 7rem;
   padding: 0.5rem;
   align-content: center;
   margin-top: -0.5rem;
+  margin-left: 2.1rem;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   text-align: center;
 
-  ul {
+  ul#menu-links {
     list-style: none;
-    text-align: justify;
-    font-size: 1.6rem;
+    text-align: center;
+    font-size: 1.4rem;
+    padding-inline-start: 10px;
 
     li {
-        padding: 0.5rem;
+        padding: 0.2rem;
     }
   }
 }

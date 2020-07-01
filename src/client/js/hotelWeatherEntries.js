@@ -3,7 +3,6 @@ import weatherIcon from '../media/weatherIcon.png';
 
 function hotelsEl(res, dataSet, aboutPlace){
 
-
     if (res[0] != undefined){
       let loopNb = res.length - 1;
       if(loopNb > 3){
@@ -21,7 +20,7 @@ function hotelsEl(res, dataSet, aboutPlace){
           <p>Average estimated price per night for 1 adult:</p>
           <span class="fas fa-money-check-alt"></span>
           <p>${deal}</p>
-          <hr>`;
+          <hr>`
 
         let newEl = document.createElement('div');
         newEl.innerHTML = elContent;

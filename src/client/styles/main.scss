@@ -48,6 +48,7 @@ article > div{
   border-color: black;
   border-style: solid;
   border-radius: 0.5rem;
+  width: 80vw;
   height: 2rem;
   padding: 0.5rem;
   font-size: 1.8rem;
@@ -215,6 +216,9 @@ article > div{
     padding: 0.5rem;
       h2{
         margin-top: 2rem;
+      }
     }
+  input.input{
+    width: 50vw;
   }
 }

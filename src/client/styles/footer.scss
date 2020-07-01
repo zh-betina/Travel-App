@@ -1,0 +1,37 @@
+$color: #595646;
+$buttonsClr: #261417;
+
+footer {
+  background-color: $color;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+.box-footer{
+  margin: 0.5rem;
+}
+
+.fa-github:hover{
+  cursor: pointer;
+  color: $buttonsClr;
+}
+.ftr-link::after{
+  content: " | ";
+}
+
+@media (min-width: 900px){
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .box-footer{
+    margin: 2rem;
+  }
+}

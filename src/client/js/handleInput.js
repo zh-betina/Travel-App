@@ -74,7 +74,7 @@ return randomPic(picData, dataSet);
 .then(dataSet=>{
 let url;
 let data;
-return postToServer(url = 'http://localhost:8081/post', data = {dataSet});
+return postToServer(url = '/post', data = {dataSet});
 })
 .then(res=>{
 return displayResult(res, dataSet);

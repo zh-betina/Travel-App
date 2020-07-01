@@ -62,12 +62,19 @@ h3 {
   text-align: center;
 }
 
-.box-wrapper{
+#results div.box-wrapper{
+  border-style: dotted;
+  border-left: none;
+  border-right: none;
+  margin-top: 0.3rem;
+}
+
+main#main .box-wrapper{
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
+  width: inherit;
 }
 
 #weather-icon{
@@ -93,6 +100,10 @@ h3 {
   }
   .bgr-box{
     max-width: 80vw;
+  }
+
+  #results div.box-wrapper{
+    border-style: none;
   }
   .box-wrapper{
     flex-direction: column;

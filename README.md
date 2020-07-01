@@ -2,11 +2,11 @@
 
 Deployed [on Heroku](https://trip-prepper.herokuapp.com)
 
-`npm install` ➡️ will get you all necessary dependencies.
-`npm run start` ➡️ for locally running server.js on port 8081.
-`npm run test` ➡️ for running jest tests.
-`npm run build-prod` ➡️ building production folder (dist).
-`npm run build-dev` ➡️ running the app in the development mode.
+`npm install` ➡️ will get you all necessary dependencies.\
+`npm run start` ➡️ for locally running server.js on port 8081.\
+`npm run test` ➡️ for running jest tests.\
+`npm run build-prod` ➡️ building production folder (dist).\
+`npm run build-dev` ➡️ running the app in the development mode.\
 
 ## Optional features:
 (At least one of these was required)
@@ -26,16 +26,16 @@ Deployed [on Heroku](https://trip-prepper.herokuapp.com)
   <details>
     <summary>To be developed in the future for further learning purposes: ⬇️</summary>
 
-    * - [ ] Add end date and display length of trip.
-    * - [ ] Allow user to add multiple destinations on the same trip.
-        * Pull in weather for additional locations.
-    * - [ ] Allow the user to add hotel and/or flight data.
-    * - [ ] Incorporate icons into forecast.
-    * - [ ] Allow user to Print their trip and/or export to PDF.
-    * - [ ] Allow the user to add a todo list and/or packing list for their trip.
-    * - [ ] Allow the user to add additional trips.
-    * - [ ] Automatically sort additional trips by countdown.
-    * - [ ] Move expired trips to bottom/have their style change so it’s clear it’s expired.
+  * - [ ] Add end date and display length of trip.
+  * - [ ] Allow user to add multiple destinations on the same trip.
+      * Pull in weather for additional locations.
+  * - [ ] Allow the user to add hotel and/or flight data.
+  * - [ ] Incorporate icons into forecast.
+  * - [ ] Allow user to Print their trip and/or export to PDF.
+  * - [ ] Allow the user to add a todo list and/or packing list for their trip.
+  * - [ ] Allow the user to add additional trips.
+  * - [ ] Automatically sort additional trips by countdown.
+  * - [ ] Move expired trips to bottom/have their style change so it’s clear it’s expired.
   </details>
 
 ## Useful resources:

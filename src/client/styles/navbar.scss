@@ -59,7 +59,7 @@ h1 {
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
-  min-width: 11.738rem;
+  width: 11.738rem;
 }
 
 .menu-btn {
@@ -90,16 +90,16 @@ h1 {
   border-top-right-radius: 0;
   text-align: center;
 
-  ul#menu-links {
-    list-style: none;
-    text-align: center;
-    font-size: 1.4rem;
-    padding-inline-start: 10px;
+    ul {
+      list-style: none;
+      text-align: center;
+      font-size: 1.4rem;
+      padding-inline-start: 10px;
 
-    li {
-        padding: 0.2rem;
+        li {
+            padding: 0.2rem;
+        }
     }
-  }
 }
 
 #menu:hover
@@ -137,6 +137,8 @@ h1 {
 @media (min-width: 900px) {
   #menu{
     flex-direction: row;
+    margin-right: 10rem;
+    width: 20rem;
   }
   #mobile-menu-btn{
     display: none;
@@ -144,12 +146,13 @@ h1 {
   #dropdown-menu{
     display: flex;
     background-color: $navClr;
-    //width: 100vw;
-    //justify-content: space-between;
+    width: 24rem;
+    justify-content: space-between;
   }
   #menu:hover
   #dropdown-menu{
     background-color: $navClr;
+    display: flex;
   }
   #menu-links{
     display: flex;

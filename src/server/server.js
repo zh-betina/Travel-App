@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const app = express();
+
 //Amadeus API
 const Amadeus = require('amadeus');
 const amadeus = new Amadeus({
@@ -14,11 +15,8 @@ const amadeus = new Amadeus({
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
 app.use(cors());
-
 app.use(express.static('dist'));
-
 
 
 app.listen(8081, ()=>{console.log('Running on port 8081')});
@@ -33,7 +31,6 @@ app.post('/post', handleData);
 function handleData(req, res){
 
   const tripData = req.body.dataSet;
-
   amadeus.shopping.hotelOffers.get({
     latitude: tripData.lat,
     longitude: tripData.lng,
@@ -48,19 +45,16 @@ function handleData(req, res){
 };
 
 //Trips routes
-
 app.get('/trips', (req, res)=>{
   res.sendFile('mytrips.html', {root: './dist'});
 });
 
 //About routes
-
 app.get('/about', (req, res)=>{
   res.sendFile('about.html', {root: './dist'});
 });
 
 //Guide routes
-
 app.get('/guide', (req, res)=>{
   res.sendFile('guide.html', {root: './dist'})
 });

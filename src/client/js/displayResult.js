@@ -1,5 +1,3 @@
-import { handleInput } from './handleInput.js';
-//import weatherIcon from '../media/weatherIcon.png';
 import { hotelsEl, weatherEl} from './hotelWeatherEntries.js';
 
 function displayResult(res, dataSet){

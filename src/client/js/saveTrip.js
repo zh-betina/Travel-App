@@ -1,4 +1,3 @@
-import { displayResult } from './displayResult.js';
 import { saveItem } from './saveItem.js';
 
 function saveTrip(){

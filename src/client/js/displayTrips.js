@@ -1,5 +1,3 @@
-import weatherIcon from '../media/weatherIcon.png';
-
 //Global variables:
 let tripsArray = [];
 
@@ -22,7 +20,6 @@ for(let i = 0; i <= tripsArray.length-1; i++){
   let contentDest = parsedAr.destination;
   let date = parsedAr.date;
   let contentWeather = parsedAr.weather;
-  //let temp = parsedAr.temp;
   let contentPic = parsedAr.photo;
   let contentHotels = parsedAr.hotels;
   newEl.innerHTML =

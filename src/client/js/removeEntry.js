@@ -1,5 +1,3 @@
-import { manageData, tripsArray } from './displayTrips.js';
-
 function removeEntry(i, tripsArray){
 
 let localSt= localStorage.length;

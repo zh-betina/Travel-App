@@ -1,5 +1,3 @@
-import { handleInput } from './handleInput.js';
-
 function longTermWeather(weatherData, dataSet){
 
   dataSet.weather = [];

@@ -45,8 +45,8 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=> {
   const coord = `lat=${dataSet.lat}&lon=${dataSet.lng}`;
   const key = `&key=8b8571fff1e64adeab1381af83e01d85`;
-  const urlCurrent = `https://cors-anywhere.herokuapp.com/https://api.weatherbit.io/v2.0/current?${coord}${key}`;
-  const urlFuture = `https://cors-anywhere.herokuapp.com/https://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
+  const urlCurrent = `https://app.cors.bridged.cc/?method=GET&url=https://api.weatherbit.io/v2.0/current?${coord}${key}`;
+  const urlFuture = `https://app.cors.bridged.cc/?method=GET&url=https://api.weatherbit.io/v2.0/forecast/daily?${coord}${key}`;
   if(dataSet.daysDiff<=14 && dataSet.daysDiff>=0){
     return getAPIdata(urlCurrent, weatherData);
   } else {
@@ -65,7 +65,7 @@ getAPIdata(geonamesUrl, geonamesRes)
 .then(dataSet=>{
   let urlPixabay;
   const key = 'key=16579484-c9f74c18198f80193bbad71c6';
-  urlPixabay = `https://cors-anywhere.herokuapp.com/https://pixabay.com/api/?${key}&q=${dataSet.city}`;
+  urlPixabay = `https://app.cors.bridged.cc/?method=GET&url=https://pixabay.com/api/?${key}&q=${dataSet.city}`;
 return getAPIdata(urlPixabay, picData);
 })
 .then(picData=>{

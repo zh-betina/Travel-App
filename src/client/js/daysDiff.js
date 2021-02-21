@@ -1,6 +1,3 @@
-import { handleInput } from './handleInput.js';
-import { getAPIdata } from './getAPIdata.js';
-
 function daysDiff(dataSet, getNowDate){
 
 const tripDate = new Date(dataSet.date);
